@@ -18,7 +18,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="h-full w-full overflow-hidden">
+    <div className="h-full w-full overflow-hidden bg-black">
       {/* Lightning Background */}
       <Lightning hue={220} xOffset={-1.2} speed={0.4} intensity={0.8} size={1} />
 
@@ -68,7 +68,7 @@ export default function Home() {
    
         <div
         id="platforms"
-        className="relative z-10 min-h-screen bg-transparent"
+        className="relative z-10 min-h-screen bg-transparent bg-black"
       >
         
         <div className="max-w-6xl mx-auto px-4 py-20">
