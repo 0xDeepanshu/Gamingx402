@@ -2,7 +2,7 @@ import Lightning from "@/components/Lightning"
 import { Button } from "@/components/ui/button"
 import { Github, Zap, Gamepad2, Code2, Smartphone, Cpu } from "lucide-react"
 import Header from "@/components/Header"
-
+import Link from "next/link"
 import Loop from "@/components/LoopLogo"
 import Speed from "@/components/Hyperspeed"
 import { TerminalDemo } from "@/components/Codeblock"
@@ -47,7 +47,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
               </Button>
@@ -57,7 +57,7 @@ export default function Home() {
                 className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
                 asChild
               >
-                <a href="#docs">View Documentation</a>
+                <a href="https://rapturelabs.mintlify.app/">View Documentation</a>
               </Button>
             </div>
           </div>
@@ -197,12 +197,12 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4 items-center">
-          <Button size="lg" className="px-8 py-6 text-white">
+          <Button size="lg" className="px-8 py-6 text-black">
             Start Building
           </Button>
-          <Button variant="outline" size="lg" className="px-8 py-6 text-white bg-transparent">
+         <Link href='https://rapturelabs.mintlify.app/'> <Button variant="outline" size="lg" className="px-8 py-6 text-white bg-transparent">
             View Docs
-          </Button>
+          </Button></Link>
         </div>
 
         {/* Feature Pills */}
@@ -262,7 +262,7 @@ export default function Home() {
         className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
         asChild
       >
-        <a href="#docs">Read Docs</a>
+        <a href="https://rapturelabs.mintlify.app/">Read Docs</a>
       </Button>
       {/* Twitter/X Button */}
       <Button
@@ -283,7 +283,7 @@ export default function Home() {
         className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
         asChild
       >
-        <a href="https://discord.gg/yourInviteCode" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.gg/RSzdmPWQ" target="_blank" rel="noopener noreferrer">
           <FaDiscord className="w-5 h-5" />
           Join Discord
         </a>
