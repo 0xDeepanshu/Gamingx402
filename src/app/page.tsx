@@ -2,7 +2,7 @@ import Lightning from "@/components/Lightning"
 import { Button } from "@/components/ui/button"
 import { Github, Zap, Gamepad2, Code2, Smartphone, Cpu } from "lucide-react"
 import Header from "@/components/Header"
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision"
+
 import Loop from "@/components/LoopLogo"
 import Speed from "@/components/Hyperspeed"
 import { TerminalDemo } from "@/components/Codeblock"
@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Platforms Section */}
-      <BackgroundBeamsWithCollision>
+   
         <div
         id="platforms"
         className="relative z-10 min-h-screen bg-transparent"
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </div>
 
-      </BackgroundBeamsWithCollision>
+     
       
       <Loop/>
       {/* Features Section */}
