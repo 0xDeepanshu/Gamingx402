@@ -28,7 +28,7 @@ function Header() {
             </a>
           </nav>
           <Button className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold gap-2" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/0xdeepanshu/docs/tree/main" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4" />
               GitHub
             </a>

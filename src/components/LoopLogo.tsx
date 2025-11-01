@@ -21,11 +21,11 @@ export default function Loop() {
         speed={120}
         direction="left"
         logoHeight={68}
-        gap={80}
+        gap={60}
         pauseOnHover
         scaleOnHover
         fadeOut
-        fadeOutColor="#676965"
+        fadeOutColor="#0a0a0a"
         ariaLabel="Technology partners"
       />
     </div>

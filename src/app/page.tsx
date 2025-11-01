@@ -7,14 +7,16 @@ import Loop from "@/components/LoopLogo"
 import Speed from "@/components/Hyperspeed"
 import { TerminalDemo } from "@/components/Codeblock"
 import { FaGithub, FaTwitter, FaDiscord } from "react-icons/fa";
+import Image from "next/image"
+import { CardStackDemo } from "@/components/terminal-stack"
 export default function Home() {
   const platforms = [
-    { name: "Unity", icon: "🎮", description: "Full-featured game engine integration" },
-    { name: "Unreal Engine", icon: "⚡", description: "Enterprise-grade game development" },
-    { name: "Telegram", icon: "📱", description: "Instant game deployment" },
-    { name: "WebGL", icon: "🌐", description: "Browser-based gaming" },
-    { name: "Farcaster", icon: "🎯", description: "Decentralized gaming" },
-    { name: "Mobile", icon: "📲", description: "iOS & Android support" },
+    { name: "Unity",  icon: "/marquee/unity.svg", description: "Full-featured game engine integration" },
+    { name: "Unreal Engine", icon: "/marquee/unreal4.svg", description: "Enterprise-grade game development" },
+    { name: "Telegram", icon: "/marquee/telegram.svg", description: "Instant game deployment" },
+    { name: "WebGL", icon: "/marquee/webgl.svg", description: "Browser-based gaming" },
+    { name: "Farcaster", icon: "/marquee/farcaster.svg", description: "Decentralized gaming" },
+    { name: "Mobile", icon: "/marquee/mobile.svg", description: "iOS & Android support" },
   ]
 
   return (
@@ -34,20 +36,19 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white text-balance">
-              Game Development,
+              x402,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Supercharged
+                For Games
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 text-balance max-w-2xl mx-auto">
-              Gx402 brings x402 functionality to games across every platform. Build once, deploy everywhere with our
-              open-source SDK.
+            <p className="text-2xl md:text-2xl text-gray-300 text-balance max-w-2xl mx-auto">
+              X402 made for Game Engines
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" asChild>
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/0xdeepanshu/docs/tree/main" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
               </Button>
@@ -83,7 +84,13 @@ export default function Home() {
                 key={platform.name}
                 className="group p-6 rounded-lg border border-cyan-500/20 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
               >
-                <div className="text-4xl mb-3">{platform.icon}</div>
+                <Image
+            src={platform.icon}
+            alt={platform.name}
+            width={32}
+            height={32}
+            className="rounded-md"
+          />
                 <h3 className="text-xl font-bold text-white mb-2">{platform.name}</h3>
                 <p className="text-gray-400 text-sm">{platform.description}</p>
               </div>
@@ -120,7 +127,7 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-bold text-white mb-2">Lightning Transactions</h3>
             <p className="text-gray-400">
-              Payments verified in milliseconds on Solana — no waiting, no delays.
+              Payments verified in milliseconds on Solana & EVM's — no waiting, no delays.
             </p>
           </div>
         </div>
@@ -188,7 +195,7 @@ export default function Home() {
       {/* Left Content Section */}
       <div className="flex-1 px-12 py-6 flex flex-col justify-center">
         <h1 className="text-6xl font-bold leading-tight mb-8 text-white max-w-2xl">
-          <span className="text-5xl">Ultimate Easy Performance</span>
+          
           <span className="block text-white mt-2">Meets Developer Experience</span>
         </h1>
 
@@ -207,26 +214,59 @@ export default function Home() {
 
         {/* Feature Pills */}
       <div className="mt-16 flex flex-wrap gap-3">
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    ⚡ Ultra Low Latency Streaming
+  
+  <div className="flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
+    <Image
+            src='/marquee/unreal4.svg'
+            alt=''
+            width={20}
+            height={20}
+            className="rounded-md"
+          />
+     Unity & Unreal AAA Engine
   </div>
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    🎮 Unity & Unreal AAA Engine
+  <div className=" flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
+    <Image
+            src='/marquee/farcaster.svg'
+            alt=''
+            width={20}
+            height={20}
+            className="rounded-md"
+          />
+     Farcaster App Connect
   </div>
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    🌐 Farcaster App Connect
+  <div className="flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
+    <Image
+            src='/marquee/blockchain.svg'
+            alt=''
+            width={20}
+            height={20}
+            className="rounded-md"
+          />
+     Web3 Wallet Integration
   </div>
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    🔒 Web3 Wallet Integration
-  </div>
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    🚀 OpenAPI & Thirdweb Nexus
+  <div className="flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
+    <Image
+            src='/marquee/thirdweb.svg'
+            alt=''
+            width={20}
+            height={20}
+            className="rounded-md"
+          />
+     OpenAPI & Thirdweb Nexus
   </div>
   <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
     👥 Live Multiplayer Support
   </div>
-  <div className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
-    🔧 Developer-Friendly SDK
+  <div className="flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
+    <Image
+            src='/marquee/developer.svg'
+            alt=''
+            width={20}
+            height={20}
+            className="rounded-md"
+          />
+     Developer-Friendly SDK
   </div>
 </div>
 
