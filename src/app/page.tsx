@@ -58,7 +58,7 @@ export default function Home() {
                 className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
                 asChild
               >
-                <a href="https://rapturelabs.mintlify.app/">View Documentation</a>
+                <a href="https://docs.gx402.org/">View Documentation</a>
               </Button>
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function Home() {
         className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold gap-2"
         asChild
       >
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/0xDeepanshu/docs" target="_blank" rel="noopener noreferrer">
           <Github className="w-5 h-5" />
           View on GitHub
         </a>
@@ -302,7 +302,7 @@ export default function Home() {
         className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
         asChild
       >
-        <a href="https://rapturelabs.mintlify.app/">Read Docs</a>
+        <a href="https://docs.gx402.org/">Read Docs</a>
       </Button>
       {/* Twitter/X Button */}
       <Button
@@ -311,7 +311,7 @@ export default function Home() {
         className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
         asChild
       >
-        <a href="https://twitter.com/yourHandle" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/gx4o2?s=11" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="w-5 h-5" /> {/* Use X icon if you prefer */}
           Follow on X
         </a>
