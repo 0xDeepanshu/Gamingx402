@@ -23,7 +23,7 @@ function Header() {
             <a href="#features" className="text-gray-300 hover:text-cyan-400 transition">
               Features
             </a>
-            <a href="https://rapturelabs.mintlify.app/" className="text-gray-300 hover:text-cyan-400 transition">
+            <a href="https://docs.gx402.org" className="text-gray-300 hover:text-cyan-400 transition">
               Docs
             </a>
           </nav>
