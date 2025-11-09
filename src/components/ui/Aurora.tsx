@@ -206,7 +206,7 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude]);
 
-  return <div ref={ctnDom} className="w-full h-full relative">
-        <FacilitatorSection />
+  return <div ref={ctnDom} className="fixed top-0 left-0 w-full h-screen pointer-events-none z-0">
+       
   </div>
 }

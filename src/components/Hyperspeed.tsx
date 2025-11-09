@@ -43,9 +43,10 @@ function Speed() {
       background: 0x000000,
       shoulderLines: 0xFFFFFF,
       brokenLines: 0xFFFFFF,
-      leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+      leftCars: [0x86e4fe, 0x2982ff, 0xC247AC],
       rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
       sticks: 0x03B3C3,
+      
     }
   }}
 />

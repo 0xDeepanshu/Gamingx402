@@ -8,8 +8,9 @@ import Speed from "@/components/Hyperspeed"
 import { TerminalDemo } from "@/components/Codeblock"
 import { FaGithub, FaTwitter, FaDiscord } from "react-icons/fa";
 import Image from "next/image"
-import { CardStackDemo } from "@/components/terminal-stack"
+import Terminalcard from "@/components/terminalcard"
 import Aurora from "@/components/ui/Aurora"
+import FacilitatorSection from "@/components/Facilitator"
 export default function Home() {
   const platforms = [
     { name: "Unity", icon: "/marquee/unity.svg", description: "Full-featured game engine integration" },
@@ -23,7 +24,12 @@ export default function Home() {
   return (
     <div className="h-full w-full overflow-hidden bg-black">
       {/* Lightning Background */}
-      <Lightning hue={220} xOffset={-1.2} speed={0.4} intensity={0.8} size={1} />
+      <Aurora
+          colorStops={["#86e4fe", "#2982ff", "#c1e5f7"]}
+          blend={0.9}
+          amplitude={1.0}
+          speed={0.5}
+        />
 
       {/* Content Overlay */}
       <div className="relative z-10 h-screen w-full flex flex-col">
@@ -70,16 +76,16 @@ export default function Home() {
 
       <div
         id="platforms"
-        className="relative z-10 min-h-screen bg-transparent bg-black"
+        className="relative z-0 min-h-screen bg-transparent "
       >
 
-        <div className="max-w-6xl mx-auto px-4 py-20 h-screen flex items-center h-full w-full justify-center flex-col">
+        <div className="z-0 max-w-6xl backdrop-blur-lg mx-auto px-4 py-20 h-screen flex items-center h-full w-full justify-center flex-col">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Deploy Everywhere</h2>
             <p className="text-gray-400 text-lg">Support for all major gaming platforms and frameworks</p>
           </div>
           <div className="">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  backdrop-blur-lg">
               {platforms.map((platform) => (
                 <div
                   key={platform.name}
@@ -105,104 +111,11 @@ export default function Home() {
 
       <Loop />
       {/* Features Section */}
-      <div className="h-screen">
-        <Aurora
-          colorStops={["#86e4fe", "#FF94B4", "#233d72"]}
-          blend={0.9}
-          amplitude={1.0}
-          speed={0.5}
-        />
+      <div className="h-full backdrop-blur-lg">
+        <FacilitatorSection />
      
       </div>
-      <div
-        id="features"
-        className="relative z-10 min-h-screen bg-[#000304] border-t border-cyan-500/20 overflow-hidden"
-      >
-        <div >
-          <Speed /> {/* keep your animated background */}
-        </div>
-        <div className="max-w-6xl mx-auto px-4 py-24 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-              Power. Precision. Speed.
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              GX402 brings instant Solana-based payments and ultra-fast verification to your apps — with one unified API.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <Zap className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Lightning Transactions</h3>
-                  <p className="text-gray-400">
-                    Payments verified in milliseconds on Solana & EVM's — no waiting, no delays.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Cpu className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Optimized for Performance</h3>
-                  <p className="text-gray-400">
-                    Built with zero-latency architecture to handle high transaction throughput effortlessly.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Code2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Unified API</h3>
-                  <p className="text-gray-400">
-                    One SDK for every platform — web, Unity, Unreal, and mobile.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <Gamepad2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Game-Ready Integration</h3>
-                  <p className="text-gray-400">
-                    Plug GX402 directly into your games for seamless on-chain in-app purchases.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Smartphone className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Mobile-First Design</h3>
-                  <p className="text-gray-400">
-                    Smooth payment flows for both iOS and Android users — optimized for speed and UX.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Github className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Open Source & Transparent</h3>
-                  <p className="text-gray-400">
-                    Fully open implementation — inspect, modify, and integrate freely.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Subtle gradient overlay for glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#6A3CFF]/10 to-[#000304] pointer-events-none" />
-      </div>
-
-      <div className="min-h-screen bg-black flex items-center">
+      <div className="min-h-screen relative bg-transparent backdrop-blur-lg flex items-center">
         {/* Left Content Section */}
         <div className="flex-1 px-12 py-6 flex flex-col justify-center">
           <h1 className="text-6xl font-bold leading-tight mb-8 text-white max-w-2xl">
@@ -285,12 +198,101 @@ export default function Home() {
 
         {/* Right Code Editor Section */}
         <div className="flex-1 pr-12 py-20 flex items-center justify-center">
-          <TerminalDemo />
+          <Terminalcard/>
         </div>
       </div>
+      <div
+        id="features"
+        className="relative min-h-screen bg-[#000304] border-t border-cyan-500/20 overflow-hidden"
+      >
+        <div className="Z-0">
+          <Speed /> {/* keep your animated background */}
+        </div>
+        <div className="max-w-6xl mx-auto px-4 py-24 relative">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+              Power. Precision. Speed.
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              GX402 brings instant SVM & EVM payments and ultra-fast verification to your apps — with one unified API.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <Zap className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Lightning Transactions</h3>
+                  <p className="text-gray-400">
+                    Payments verified in milliseconds on Solana & EVM's — no waiting, no delays.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Cpu className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Optimized for Performance</h3>
+                  <p className="text-gray-400">
+                    Built with zero-latency architecture to handle high transaction throughput effortlessly.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Code2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Unified API</h3>
+                  <p className="text-gray-400">
+                    One SDK for every platform — web, Unity, Unreal, and mobile.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <Gamepad2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Game-Ready Integration</h3>
+                  <p className="text-gray-400">
+                    Plug GX402 directly into your games for seamless on-chain in-app purchases.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Smartphone className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Mobile-First Design</h3>
+                  <p className="text-gray-400">
+                    Smooth payment flows for both iOS and Android users — optimized for speed and UX.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Github className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Open Source & Transparent</h3>
+                  <p className="text-gray-400">
+                    Fully open implementation — inspect, modify, and integrate freely.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Subtle gradient overlay for glow */}
+        <div className="absolute z-0 inset-0 bg-gradient-to-b from-transparent via-[#6A3CFF]/10 to-[#000304] pointer-events-none" />
+      </div>
+
+      
       {/* CTA Section */}
 
-      <div className="relative z-10 min-h-screen bg-gradient-to-b from-black/80 to-black backdrop-blur-sm border-t border-cyan-500/20 flex items-center justify-center">
+      <div className="relative min-h-screen bg-gradient-to-b from-black/80 to-black backdrop-blur-sm border-t border-cyan-500/20 flex items-center justify-center">
         <div className="max-w-3xl mx-auto px-4 text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-white">Ready to Build?</h2>
           <p className="text-xl text-gray-400">

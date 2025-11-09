@@ -15,7 +15,7 @@ const imageLogos = [
 
 export default function Loop() {
   return (
-    <div className='bg-black flex items-center justify-center' style={{ height: '400px', position: 'relative', overflow: 'hidden'}}>
+    <div className='bg-transparent backdrop-blur-lg flex items-center justify-center' style={{ height: '400px', position: 'relative', overflow: 'hidden'}}>
       <LogoLoop
         logos={imageLogos}
         speed={120}
