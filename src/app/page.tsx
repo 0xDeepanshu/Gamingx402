@@ -22,7 +22,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="h-full w-full overflow-hidden bg-black">
+    <div className="h-full w-full bg-black">
       {/* Lightning Background */}
       <Aurora
           colorStops={["#86e4fe", "#2982ff", "#c1e5f7"]}
@@ -32,29 +32,29 @@ export default function Home() {
         />
 
       {/* Content Overlay */}
-      <div className="relative z-10 h-screen w-full flex flex-col">
+      <div className="relative z-10 w-full flex flex-col">
         <Header />
 
         {/* Hero Section */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 text-center">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30">
-              <span className="text-cyan-400 text-sm font-medium">Open Source Game SDK</span>
+        <div className="min-h-screen flex-1 flex flex-col items-center justify-center px-4 text-center">
+          <div className="max-w-3xl space-y-4 sm:space-y-6">
+            <div className="inline-block px-3 sm:px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30">
+              <span className="text-cyan-400 text-xs sm:text-sm font-medium">Open Source Game SDK</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white text-balance">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-balance leading-tight">
               x402,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 For Games
               </span>
             </h1>
 
-            <p className="text-2xl md:text-2xl text-gray-300 text-balance max-w-2xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-300 text-balance max-w-2xl mx-auto">
               X402 made for Game Engines
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
+              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold text-base sm:text-sm" asChild>
                 <a href="https://github.com/0xdeepanshu/docs/tree/main" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
@@ -62,7 +62,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
+                className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent text-base sm:text-sm"
                 asChild
               >
                 <a href="https://docs.gx402.org/">View Documentation</a>
@@ -76,16 +76,16 @@ export default function Home() {
 
       <div
         id="platforms"
-        className="relative z-0 min-h-screen bg-transparent "
+        className="relative z-0 min-h-screen py-20 bg-transparent"
       >
 
-        <div className="z-0 max-w-6xl backdrop-blur-lg mx-auto px-4 py-20 h-screen flex items-center h-full w-full justify-center flex-col">
-          <div className="text-center mb-16">
+        <div className="z-0 max-w-6xl backdrop-blur-lg mx-auto px-4 py-20 min-h-screen flex items-center h-full w-full justify-center flex-col">
+          <div className="text-center mb-16 w-full">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Deploy Everywhere</h2>
             <p className="text-gray-400 text-lg">Support for all major gaming platforms and frameworks</p>
           </div>
-          <div className="">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  backdrop-blur-lg">
+          <div className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 backdrop-blur-lg">
               {platforms.map((platform) => (
                 <div
                   key={platform.name}
@@ -113,31 +113,31 @@ export default function Home() {
       {/* Features Section */}
       <div className="h-full backdrop-blur-lg">
         <FacilitatorSection />
-     
+
       </div>
-      <div className="min-h-screen relative bg-transparent backdrop-blur-lg flex items-center">
+      <div className="min-h-screen relative bg-transparent backdrop-blur-lg flex flex-col md:flex-row items-center">
         {/* Left Content Section */}
-        <div className="flex-1 px-12 py-6 flex flex-col justify-center">
-          <h1 className="text-6xl font-bold leading-tight mb-8 text-white max-w-2xl">
+        <div className="w-full md:flex-1 px-4 md:px-12 py-6 flex flex-col justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 md:mb-8 text-white max-w-2xl">
 
             <span className="block text-white mt-2">Meets Developer Experience</span>
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-10 max-w-md leading-relaxed">
-            GX402 is more than a system — it’s your execution layer for speed, scalability, and control. Every line optimized. Every process accelerated.
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-md leading-relaxed">
+            GX402 is more than a system — it's your execution layer for speed, scalability, and control. Every line optimized. Every process accelerated.
           </p>
 
-          <div className="flex gap-4 items-center">
-            <Button size="lg" className="px-8 py-6 text-black">
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <Button size="lg" className="px-6 py-4 text-black w-full sm:w-auto">
               Start Building
             </Button>
-            <Link href='https://rapturelabs.mintlify.app/'> <Button variant="outline" size="lg" className="px-8 py-6 text-white bg-transparent">
+            <Link href='https://rapturelabs.mintlify.app/'> <Button variant="outline" size="lg" className="px-6 py-4 text-white bg-transparent w-full sm:w-auto">
               View Docs
             </Button></Link>
           </div>
 
           {/* Feature Pills */}
-          <div className="mt-16 flex flex-wrap gap-3">
+          <div className="mt-10 md:mt-16 flex flex-wrap gap-3 justify-center md:justify-start">
 
             <div className="flex justify-center items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
               <Image
@@ -197,7 +197,7 @@ export default function Home() {
         </div>
 
         {/* Right Code Editor Section */}
-        <div className="flex-1 pr-12 py-20 flex items-center justify-center">
+        <div className="w-full md:flex-1 px-4 py-10 md:py-20 md:pr-12 flex items-center justify-center hidden sm:block">
           <Terminalcard/>
         </div>
       </div>
@@ -208,19 +208,19 @@ export default function Home() {
         <div className="Z-0">
           <Speed /> {/* keep your animated background */}
         </div>
-        <div className="max-w-6xl mx-auto px-4 py-24 relative">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+        <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
               Power. Precision. Speed.
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
               GX402 brings instant SVM & EVM payments and ultra-fast verification to your apps — with one unified API.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
             <div className="space-y-6">
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Zap className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Lightning Transactions</h3>
@@ -230,7 +230,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Cpu className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Optimized for Performance</h3>
@@ -240,7 +240,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Code2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Unified API</h3>
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Gamepad2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Game-Ready Integration</h3>
@@ -262,7 +262,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Smartphone className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Mobile-First Design</h3>
@@ -272,7 +272,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Github className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Open Source & Transparent</h3>
@@ -289,19 +289,19 @@ export default function Home() {
         <div className="absolute z-0 inset-0 bg-gradient-to-b from-transparent via-[#6A3CFF]/10 to-[#000304] pointer-events-none" />
       </div>
 
-      
+
       {/* CTA Section */}
 
       <div className="relative min-h-screen bg-gradient-to-b from-black/80 to-black backdrop-blur-sm border-t border-cyan-500/20 flex items-center justify-center">
-        <div className="max-w-3xl mx-auto px-4 text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Ready to Build?</h2>
-          <p className="text-xl text-gray-400">
+        <div className="max-w-3xl mx-auto px-4 text-center space-y-6 sm:space-y-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Ready to Build?</h2>
+          <p className="text-lg sm:text-xl text-gray-400">
             Join the community and start building games with gx402 today
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold gap-2"
+              className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold gap-2 w-full sm:w-auto"
               asChild
             >
               <a href="https://github.com/0xDeepanshu/docs" target="_blank" rel="noopener noreferrer">
@@ -312,7 +312,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
+              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent w-full sm:w-auto"
               asChild
             >
               <a href="https://docs.gx402.org/">Read Docs</a>
@@ -321,7 +321,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
+              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent w-full sm:w-auto"
               asChild
             >
               <a href="https://x.com/gx4o2?s=11" target="_blank" rel="noopener noreferrer">
@@ -333,7 +333,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
+              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent w-full sm:w-auto"
               asChild
             >
               <a href="https://discord.gg/RSzdmPWQ" target="_blank" rel="noopener noreferrer">
@@ -342,7 +342,7 @@ export default function Home() {
               </a>
             </Button>
           </div>
-          <div className="text-gray-400 text-3xl ">Building More Soon...</div>
+          <div className="text-gray-400 text-xl sm:text-3xl ">Building More Soon...</div>
         </div>
       </div>
     </div>
